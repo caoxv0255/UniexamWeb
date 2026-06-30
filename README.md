@@ -26,9 +26,11 @@
 ### 技术栈
 
 - **前端**：原生 HTML5 + CSS3 + JavaScript (ES6+)
+- **构建工具**：Vite 8.x
 - **数据存储**：IndexedDB（本地持久化）+ localStorage（状态管理）
 - **公式渲染**：KaTeX（客户端 LaTeX 渲染）
 - **测试**：Chrome DevTools Protocol（端到端测试）
+- **部署**：Docker、PWA、Electron
 
 ## 🚀 快速开始
 
@@ -36,9 +38,38 @@
 
 - **操作系统**：Windows 10/11、macOS 或 Linux
 - **浏览器**：Chrome ≥ 100、Firefox ≥ 95、Safari ≥ 15、Edge ≥ 100
-- **Node.js**：≥ 18（用于运行测试脚本）
+- **Node.js**：≥ 18
+- **npm**：≥ 9.0.0
 
-### 本地启动
+### 安装依赖
+
+```bash
+npm install
+```
+
+### 本地开发
+
+```bash
+npm run dev
+```
+
+访问：`http://localhost:5173`
+
+### 构建生产版本
+
+```bash
+npm run build
+```
+
+构建产物输出到 `dist/` 目录。
+
+### 预览生产版本
+
+```bash
+npm run preview
+```
+
+### 传统方式（无需构建）
 
 #### 方式一：VS Code Live Server（推荐）
 
