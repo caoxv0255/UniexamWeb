@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>四学科学习平台 · 章节学习 / 记忆巩固 / 题型索引 / 复习总结</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/chapters.css">
+<link rel="stylesheet" href="assets/css/memory.css">
+<link rel="stylesheet" href="assets/css/question-bank.css">
+<link rel="stylesheet" href="assets/css/notes.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo" href="#/">📚 学习平台</a>
+    <div class="countdown" id="countdown" title="距最近考试天数">
+      <span class="lbl">距考试</span>
+      <span class="num" id="countdown-num">—</span>
+      <span class="lbl">天</span>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="菜单">☰</button>
+    <nav class="nav-tabs" id="nav-tabs">
+      <a class="nav-tab" data-route="/" data-label="首页">首页</a>
+      <a class="nav-tab" data-route="/subject/gaoshu" data-label="高数二"><span class="dot" style="background:#3b82f6"></span>高数二</a>
+      <a class="nav-tab" data-route="/subject/xiandai" data-label="线代"><span class="dot" style="background:#10b981"></span>线代</a>
+      <a class="nav-tab" data-route="/subject/weijing" data-label="微经"><span class="dot" style="background:#f59e0b"></span>微经</a>
+      <a class="nav-tab" data-route="/subject/datastruct" data-label="数据结构"><span class="dot" style="background:#8b5cf6"></span>数据结构</a>
+      <a class="nav-tab" data-route="/flashcard" data-label="闪卡">🔄 闪卡</a>
+      <a class="nav-tab" data-route="/bank" data-label="题型库">🗂 题型库</a>
+      <a class="nav-tab" data-route="/notes" data-label="笔记">📝 笔记</a>
+      <a class="nav-tab" data-route="/memory" data-label="记忆">📊 记忆</a>
+      <a class="nav-tab" data-route="/favorites" data-label="收藏">⭐ 收藏</a>
+      <a class="nav-tab" data-route="/wrong" data-label="错题">❌ 错题</a>
+      <a class="nav-tab nav-data" data-route="#" data-label="数据">💾 数据 ▾</a>
+      <div class="data-dropdown" id="data-dropdown">
+        <button data-action="export">导出备份</button>
+        <label class="file-label">导入备份<input type="file" id="import-file" accept="application/json" hidden></label>
+        <button data-action="clear" class="danger">清空全部数据</button>
+      </div>
+      <a class="nav-tab nav-help" data-route="/help" data-label="帮助" title="帮助">?</a>
+    </nav>
+  </div>
+</header>
+
+<main id="app" class="container"></main>
+
+<div class="toast-container" id="toast-container"></div>
+
+<div class="help-overlay" id="help-overlay" hidden>
+  <div class="help-card">
+    <div class="help-step" id="help-step">
+      <h2 id="help-title">欢迎使用</h2>
+      <p id="help-text"></p>
+    </div>
+    <div class="help-progress" id="help-progress"></div>
+    <div class="help-actions">
+      <button class="btn ghost" id="help-skip">跳过</button>
+      <button class="btn primary" id="help-next">下一步</button>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

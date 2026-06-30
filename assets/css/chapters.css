@@ -1,0 +1,59 @@
+/* ===== 章节学习系统 ===== */
+.chapter-layout{display:grid;grid-template-columns:260px 1fr;gap:24px;align-items:start}
+.chapter-sidebar{position:sticky;top:90px;align-self:start;max-height:calc(100vh - 110px);overflow-y:auto;padding-right:4px}
+.chapter-sidebar h4{font-size:12px;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;padding-left:8px}
+.chapter-list{list-style:none}
+.chapter-item{padding:10px 14px;border-radius:8px;cursor:pointer;font-size:14px;color:var(--text2);transition:all .15s;margin-bottom:2px;border-left:3px solid transparent}
+.chapter-item:hover{background:var(--card2);color:var(--text)}
+.chapter-item.active{background:var(--card2);color:var(--text);border-left-color:var(--accent,var(--blue))}
+.chapter-item .cnt{float:right;font-size:12px;color:var(--text3)}
+.chapter-item .mini-prog{font-size:11px;color:var(--text3);margin-top:2px}
+.chapter-item .mini-prog b{color:var(--accent,var(--blue2))}
+
+.chapter-main{min-width:0}
+.chapter-header{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:20px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.chapter-header .ch-icon{font-size:40px}
+.chapter-header .ch-info{flex:1;min-width:0}
+.chapter-header .ch-info h2{font-size:22px;margin-bottom:4px}
+.chapter-header .ch-info .ch-meta{font-size:13px;color:var(--text3)}
+.chapter-header .ch-stats{display:flex;gap:18px;font-size:13px;color:var(--text2)}
+.chapter-header .ch-stats b{color:var(--text);font-size:18px;display:block}
+
+.progress-ring-wrap{display:inline-flex;align-items:center;justify-content:center;position:relative;width:64px;height:64px}
+.progress-ring svg{transform:rotate(-90deg)}
+.progress-ring .bg{stroke:var(--bg2);fill:none;stroke-width:6}
+.progress-ring .fg{stroke:var(--accent,var(--blue));fill:none;stroke-width:6;stroke-linecap:round;transition:stroke-dasharray .6s}
+.progress-ring-text{position:absolute;font-size:14px;font-weight:800;color:var(--text)}
+
+.kp-card{background:var(--card);border:1px solid var(--border);border-radius:14px;margin-bottom:14px;transition:all .2s;overflow:hidden}
+.kp-card:hover{border-color:var(--accent,var(--blue))}
+.kp-card-head{padding:16px 20px;display:flex;align-items:center;gap:14px;cursor:pointer}
+.kp-card-badge{flex-shrink:0;width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:#fff;background:var(--accent,var(--blue));text-align:center;line-height:1.1}
+.kp-card-title{flex:1;min-width:0}
+.kp-card-title h4{font-size:15px;margin-bottom:2px}
+.kp-card-title .sub{font-size:12px;color:var(--text3)}
+.kp-card-actions{display:flex;align-items:center;gap:10px}
+.learned-check{width:24px;height:24px;border-radius:6px;border:2px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .15s;font-size:14px;color:transparent;background:var(--card2)}
+.learned-check.done{background:var(--green);border-color:var(--green);color:#fff}
+.fav-star{cursor:pointer;font-size:18px;color:var(--text3);transition:color .15s}
+.fav-star.active{color:var(--orange2)}
+
+.related-box{background:var(--bg2);border-radius:10px;padding:14px 16px}
+.related-box .rel-title{font-size:12px;color:var(--text3);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
+.related-box .rel-list{display:flex;flex-wrap:wrap;gap:6px}
+.related-box .rel-link{padding:4px 10px;border-radius:8px;background:var(--card2);color:var(--text2);font-size:12px;cursor:pointer;transition:all .15s}
+.related-box .rel-link:hover{background:var(--accent,var(--blue));color:#fff}
+
+.quick-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:30px}
+.quick-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;cursor:pointer;transition:all .2s;text-align:center}
+.quick-card:hover{transform:translateY(-3px);border-color:var(--blue);box-shadow:var(--shadow)}
+.quick-card .qi{font-size:28px;margin-bottom:8px}
+.quick-card .qt{font-size:14px;font-weight:600}
+.quick-card .qd{font-size:12px;color:var(--text3);margin-top:4px}
+
+.review-banner{background:linear-gradient(135deg,rgba(245,158,11,.12),rgba(139,92,246,.12));
+  border:1px solid var(--border);border-radius:14px;padding:18px 22px;margin-bottom:24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.review-banner .rb-icon{font-size:32px}
+.review-banner .rb-text{flex:1;min-width:120px}
+.review-banner .rb-text b{font-size:18px;color:var(--orange2)}
+.review-banner .rb-text .sub{font-size:13px;color:var(--text2)}
